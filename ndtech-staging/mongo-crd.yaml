@@ -12,7 +12,7 @@ spec:
     - name: mongoadmin
       db: admin
       passwordSecretRef:
-        name: mongo-admin-secret
+        name: mongoadminsecret
       roles:
         - name: clusterAdmin
           db: admin
@@ -21,7 +21,7 @@ spec:
     - name: testuser1
       db: test
       passwordSecretRef:
-        name: mongo-testuser1-secret
+        name: mongotestuser1secret
       roles:
         - name: readWrite
           db: test
