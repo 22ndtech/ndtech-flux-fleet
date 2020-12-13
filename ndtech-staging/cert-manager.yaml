@@ -24,7 +24,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: ./deploy/cert-manager
+      chart: ./deploy/charts/cert-manager
       version: 0.0.1.7
       sourceRef:
         kind: GitRepository
