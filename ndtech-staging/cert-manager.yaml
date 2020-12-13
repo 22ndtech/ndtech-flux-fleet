@@ -25,7 +25,7 @@ spec:
   chart:
     spec:
       chart: ./deploy/charts/cert-manager
-      version: 0.0.1.7
+      version: 1.1.0
       sourceRef:
         kind: GitRepository
         name: cert-manager
