@@ -14,3 +14,30 @@ spec:
   ref:
     branch: master
   url: https://github.com/jetstack/cert-manager
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./deploy/charts/cert-manager
+      version: 0.0.1.2
+      sourceRef:
+        kind: GitRepository
+        name: cert-manager
+        namespace: flux-system
+      interval: 1m
+  values:
+    installCRDs: true
+    image:
+      tag: 1.1.0
+    webhok:
+      image:
+        tag: 1.1.0
+    cainjector:
+      image:
+        tag: 1.1.0
