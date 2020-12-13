@@ -35,7 +35,7 @@ spec:
     installCRDs: true
     image:
       tag: v1.1.0
-    webhok:
+    webhook:
       image:
         tag: v1.1.0
     cainjector:
