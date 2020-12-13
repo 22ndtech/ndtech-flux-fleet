@@ -34,10 +34,10 @@ spec:
   values:
     installCRDs: true
     image:
-      tag: 1.1.0
+      tag: v1.1.0
     webhok:
       image:
-        tag: 1.1.0
+        tag: v1.1.0
     cainjector:
       image:
-        tag: 1.1.0
+        tag: v1.1.0
