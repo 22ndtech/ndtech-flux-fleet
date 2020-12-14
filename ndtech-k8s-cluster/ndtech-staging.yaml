@@ -2,26 +2,28 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: flux-system
+  name: ndtech-staging
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 30s
   ref:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/22ndtech/ndtech-flux-fleet
+  url: ssh://git@github.com/22ndtech/ndtech-flux-staging
+
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: flux-system
+  name: ndtech-staging
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./ndtech-k8s-cluster
+  path: ./
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: ndtech-staging
   validation: client
+
