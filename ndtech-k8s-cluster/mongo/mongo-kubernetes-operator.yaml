@@ -3,11 +3,9 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: mongo-kubernetes-operator
-  namespace: flux-system
+  namespace: mongo
 spec:
   interval: 30s
   ref:
     branch: master
-  secretRef:
-    name:  flux-system
-  url: ssh://git@github.com/22ndtech/mongodb-kubernetes-operator
+  url: https://github.com/22ndtech/mongodb-kubernetes-operator
