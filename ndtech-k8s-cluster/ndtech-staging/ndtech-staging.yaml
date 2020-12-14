@@ -8,8 +8,6 @@ spec:
   interval: 30s
   ref:
     branch: main
-  secretRef:
-    name: flux-system
   url: https://github.com/22ndtech/ndtech-flux-staging
 
 ---
