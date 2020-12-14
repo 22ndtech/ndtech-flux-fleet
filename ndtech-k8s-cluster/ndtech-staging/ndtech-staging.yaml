@@ -3,21 +3,19 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: ndtech-staging
-  namespace: flux-system
+  namespace: ndtech-staging
 spec:
   interval: 30s
   ref:
     branch: main
-  secretRef:
-    name: flux-system
-  url: ssh://git@github.com/22ndtech/ndtech-flux-staging
+  url: https://github.com/22ndtech/ndtech-flux-staging
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: ndtech-staging
-  namespace: flux-system
+  namespace: ndtech-staging
 spec:
   interval: 10m0s
   path: ./
