@@ -17,7 +17,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./releases/latest/download/components.yaml
+  path: ./releases/download/v0.4.1
   prune: true
   sourceRef:
     kind: GitRepository
