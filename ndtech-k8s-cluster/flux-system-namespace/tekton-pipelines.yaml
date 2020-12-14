@@ -28,3 +28,8 @@ spec:
     auth:
       docker:
         url: https://hub.docker.com
+  valuesFrom:
+    - kind: Secret
+      name: docker-hub-credentials
+      valuesKey: data
+      targetPath: .dockerconfigjson
