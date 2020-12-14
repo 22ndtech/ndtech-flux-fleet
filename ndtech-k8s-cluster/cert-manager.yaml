@@ -8,7 +8,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: cert-manager
-  namespace: flux-system
+  namespace: cert-manager
 spec:
   interval: 30s
   ref:
@@ -25,11 +25,11 @@ spec:
   chart:
     spec:
       chart: ./deploy/charts/cert-manager
-      version: 0.0.1.4
+      version: 0.0.1.5
       sourceRef:
         kind: GitRepository
         name: cert-manager
-        namespace: flux-system
+        namespace: cert-manager
       interval: 1m
   values:
     installCRDs: true
