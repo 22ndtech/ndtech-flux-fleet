@@ -9,3 +9,17 @@ spec:
   ref:
     branch: master
   url: https://github.com/kubernetes-sigs/metrics-server
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: metrics-server
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./releases/download/v0.4.1
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: metrics-server
+  validation: client
