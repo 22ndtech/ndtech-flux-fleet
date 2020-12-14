@@ -17,7 +17,8 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: tekton
+      chart: cdf/tekton-pipeline
+      version: '0.18.0'
       sourceRef:
         kind: HelmRepository
         name: cdfoundation-tekton
