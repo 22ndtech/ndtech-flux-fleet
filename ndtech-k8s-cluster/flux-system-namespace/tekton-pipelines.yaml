@@ -28,4 +28,8 @@ spec:
     auth:
       docker:
         url: https://hub.docker.com
-        configJson: eyJhdXRocyI6eyJodHRwczovL2h1Yi5kb2NrZXIuY29tIjp7InVzZXJuYW1lIjoiamVmZjIybmR0ZWNoIiwicGFzc3dvcmQiOiIxRmluZ29sZmluQCIsImVtYWlsIjoiamVmZkAyMm5kdGVjaC5jb20iLCJhdXRoIjoiYW1WbVpqSXlibVIwWldOb09qRkdhVzVuYjJ4bWFXNUEifX19
+  valuesFrom:
+    - kind: Secret
+      name: docker-hub-credentials
+      valuesKey: .dockerconfigjson
+      targetPath: auth.docker.configJson
