@@ -31,5 +31,4 @@ spec:
   valuesFrom:
     - kind: Secret
       name: docker-hub-credentials
-      valuesKey: .dockerconfigjson
       targetPath: auth.docker.configJson
