@@ -11,8 +11,8 @@ spec:
       chart: ./charts/tekton-pipeline
       sourceRef:
         kind: GitRepository
-        name: ndtech-sapper
-        namespace: ndtech
+        name: tekton-helm-chart
+        namespace: flux-system
       interval: 1m
   values:
     replicaCount: 2
