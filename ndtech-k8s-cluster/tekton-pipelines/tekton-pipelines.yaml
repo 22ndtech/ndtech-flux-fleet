@@ -4,7 +4,6 @@ kind: HelmRelease
 metadata:
   name: tekton
   namespace: flux-system
-  resourceVersion: "0.0.1"
 spec:
   interval: 5m
   chart:
