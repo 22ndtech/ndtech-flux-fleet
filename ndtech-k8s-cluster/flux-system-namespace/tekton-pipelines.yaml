@@ -25,4 +25,7 @@ spec:
       interval: 1m
   values:
     replicaCount: 2
+    auth:
+      docker:
+        url: https://hub.docker.com
 
