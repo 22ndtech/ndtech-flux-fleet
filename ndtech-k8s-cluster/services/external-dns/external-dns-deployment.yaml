@@ -1,10 +1,4 @@
 ---
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: external-dns
-  namespace: external-dns
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
