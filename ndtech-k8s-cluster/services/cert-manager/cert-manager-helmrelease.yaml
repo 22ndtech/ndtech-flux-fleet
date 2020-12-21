@@ -42,6 +42,7 @@ spec:
         name: jetstack
         namespace: flux-system
       interval: 10m
-  # values:
+  values:
+    installCRDs: true
   #   admissionWebhooks:
   #     failurePolicy: Ignore
