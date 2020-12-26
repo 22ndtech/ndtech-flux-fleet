@@ -25,3 +25,19 @@ spec:
                 number: 8080
             path: /
             pathType: ImplementationSpecific
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: code-server-jaackdreality
+  namespace: ndtech
+spec:
+  secretName: letsencrypt
+  dnsNames:
+  - code-server.jaackdreality.com
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+    group: cert-manager.io
+  isCA: true
+  commonName: code-server.jaackdreality.com
