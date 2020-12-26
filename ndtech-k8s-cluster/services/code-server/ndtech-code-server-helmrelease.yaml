@@ -18,5 +18,5 @@ spec:
     extraSecretMounts:
       - name: kube-config-admin
         mountPath: /home/coder/.kube
-        secretName: code-server-secret-files
+        secretName: kube-config-admin
         readOnly: true
