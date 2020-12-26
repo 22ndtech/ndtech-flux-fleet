@@ -14,3 +14,9 @@ spec:
         name: ndtech-code-server
         namespace: flux-system
       interval: 1m
+  values:
+    extraSecretMounts:
+      - name: kube-config-admin
+        mountPath: /home/coder/.kube
+        secretName: code-server-secret-files
+        readOnly: true
