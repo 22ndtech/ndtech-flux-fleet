@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ndtech-code-server
+  namespace: code-server
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./chart/ndtech-code-server
+      sourceRef:
+        kind: GitRepository
+        name: ndtech-code-server
+        namespace: flux-system
+      interval: 1m
