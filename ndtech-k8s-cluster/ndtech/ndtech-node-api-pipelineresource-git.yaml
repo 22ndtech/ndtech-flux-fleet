@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: ndtech-node-api
+  namespace: ndtech
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/22ndtech/ndtech-node-api.git
+    - name: revision
+      value: main
