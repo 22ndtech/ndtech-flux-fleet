@@ -39,4 +39,4 @@ spec:
       tls:
         - hosts:
           - trow.jaackdreality.com
-          secretName: letsencrypt
+          secretName: trow-tls-secret

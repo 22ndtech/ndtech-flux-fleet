@@ -5,7 +5,7 @@ metadata:
   name: trow
   namespace: trow
 spec:
-  secretName: letsencrypt
+  secretName: letsencrypt-tfg2w
   dnsNames:
   - trow.jaackdreality.com
   issuerRef:
