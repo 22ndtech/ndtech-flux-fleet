@@ -20,6 +20,8 @@ spec:
       pullPolicy: IfNotPresent
     trow:
       domain: trow.jaackdreality.com
+      user: trow
+      password: myp@ssW0rd
       validation:
         enabled: false
       imagePullSecrets:
