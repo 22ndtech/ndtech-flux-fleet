@@ -1,3 +1,19 @@
+# ---
+# apiVersion: cert-manager.io/v1
+# kind: Certificate
+# metadata:
+#   name: trow-staging
+#   namespace: trow
+# spec:
+#   secretName: trow-tls-secret
+#   dnsNames:
+#   - trow.jaackdreality.com
+#   issuerRef:
+#     name: letsencrypt
+#     kind: ClusterIssuer
+#     group: cert-manager.io
+#   isCA: true
+#   commonName: trow.jaackdreality.com
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
@@ -5,12 +21,12 @@ metadata:
   name: trow
   namespace: trow
 spec:
-  secretName: letsencrypt-tfg2w
+  secretName: trow-tls-secret-staging
   dnsNames:
   - trow.jaackdreality.com
   issuerRef:
-    name: letsencrypt
+    name: letsencrypt-staging
     kind: ClusterIssuer
     group: cert-manager.io
   isCA: true
-  commonName: trow.jaackdreality.com
+  commonName: trow.jaackdreality.com  

@@ -32,11 +32,11 @@ spec:
         external-dns.alpha.kubernetes.io/hostname: trow.jaackdreality.com
         kubernetes.io/ingress.class: nginx
         kubernetes.io/tls-acme: "true"
-        cert-manager.io/cluster-issuer: letsencrypt
+        cert-manager.io/cluster-issuer: letsencrypt-staging
       hosts:
         - paths: ['/']
           host:
       tls:
         - hosts:
           - trow.jaackdreality.com
-          secretName: trow-tls-secret
+          secretName: trow-tls-secret-staging
