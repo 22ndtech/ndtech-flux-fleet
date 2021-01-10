@@ -53,7 +53,7 @@ spec:
   chart:
     spec:
       chart: ./charts/trow
-      version: 0.3.0
+      version: 0.3.1-PROXY
       sourceRef:
         kind: GitRepository
         name: trow
@@ -61,6 +61,7 @@ spec:
       interval: 10m
   values:
     image:
+      tag: 0.3.1-PROXY
       pullPolicy: IfNotPresent
     trow:
       domain: trow.jaackdreality.com
