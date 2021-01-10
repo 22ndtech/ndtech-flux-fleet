@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: ndtech-node-api-staging-image
+  namespace: ndtech-staging
+spec:
+  type: image
+  params:
+    - name: url
+      value: 22ndtech/ndtech-node-api
