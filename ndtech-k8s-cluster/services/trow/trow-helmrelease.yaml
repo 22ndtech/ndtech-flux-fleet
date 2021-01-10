@@ -52,7 +52,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: trow
+      chart: ./charts/trow
       version: 0.3.0
       sourceRef:
         kind: GitRepository
