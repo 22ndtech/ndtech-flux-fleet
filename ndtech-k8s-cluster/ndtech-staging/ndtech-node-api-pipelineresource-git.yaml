@@ -7,6 +7,6 @@ spec:
   type: git
   params:
     - name: url
-      value: https://github.com/22ndtech/ndtech-node-api.git
+      value: https://github.com/22ndtech/ndtech-node-api
     - name: revision
       value: main
