@@ -1,0 +1,58 @@
+---
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: mongodb
+  namespace: mongo
+spec:
+  members: 3
+  type: ReplicaSet
+  version: "4.2.6"
+  security:
+    authentication:
+      modes: ["SCRAM"]
+  users:
+    - name: mongoadmin
+      db: admin
+      passwordSecretRef:
+        name: mongo-admin-secret
+      roles:
+        - name: clusterAdmin
+          db: admin
+        - name: userAdminAnyDatabase
+          db: admin
+    - name: testuser1
+      db: test
+      passwordSecretRef:
+        name: mongo-testuser1-secret
+      roles:
+        - name: readWrite
+          db: test
+    - name: ndtech-sapper
+      db: ndtech-sapper
+      passwordSecretRef:
+        name: ndtech-sapper-secret
+      roles:
+        - name: readWrite
+          db: ndtech-sapper
+    - name: ndtech-node-api
+      db: ndtech-node-api
+      passwordSecretRef:
+        name: ndtech-node-api-secret
+      roles:
+        - name: readWrite
+          db: ndtech-node-api
+    - name: john
+      db: john
+      passwordSecretRef:
+        name: john-secret
+      roles:
+        - name: readWrite
+          db: john
+    - name: ndtech-node-api-users
+      db: ndtech-node-api-users
+      passwordSecretRef:
+        name: ndtech-node-api-users-secret
+      roles:
+        - name: readWrite
+          db: ndtech-node-api-users

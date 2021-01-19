@@ -1,0 +1,38 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: 22ndtech-com
+  namespace: ndtech
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: 22ndtech.com, www.22ndtech.com
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  tls:
+    - secretName: letsencrypt-22ndtech
+      hosts:
+        - 22ndtech.com
+        - www.22ndtech.com
+  rules:
+    - host: 22ndtech.com
+      http:
+        paths:
+          - backend:
+             service:
+              name: ndtech-sapper
+              port:
+                number: 80
+            path: /
+            pathType: ImplementationSpecific
+    - host: www.22ndtech.com
+      http:
+        paths:
+          - backend:
+             service:
+              name: ndtech-sapper
+              port:
+                number: 80
+            path: /
+            pathType: ImplementationSpecific
