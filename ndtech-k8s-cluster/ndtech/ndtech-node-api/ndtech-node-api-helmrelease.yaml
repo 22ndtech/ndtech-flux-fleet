@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: ./charts/ndtech-node-api
-      version: 0.0.8
+      version: 0.0.9
       sourceRef:
         kind: GitRepository
         name: ndtech-node-api
@@ -19,4 +19,4 @@ spec:
     deployment:
       replicas: 1
       namespace: ndtech
-      imageVersion: 0.0.1
+      imageVersion: 0.0.2
