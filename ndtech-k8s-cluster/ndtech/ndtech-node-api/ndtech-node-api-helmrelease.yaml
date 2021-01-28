@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: ./charts/ndtech-node-api
-      version: 0.0.9
+      version: 0.0.10
       sourceRef:
         kind: GitRepository
         name: ndtech-node-api
