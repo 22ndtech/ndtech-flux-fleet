@@ -1,0 +1,12 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: ndtech-website
+  namespace: ndtech
+spec:
+  interval: 30s
+  ref:
+    branch: master
+  url: https://github.com/22ndtech/ndtech-website
+
