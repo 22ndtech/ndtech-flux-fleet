@@ -18,5 +18,5 @@ spec:
   values:
     deployment:
       replicas: 1
-      namespace: ndtech-staging
+      namespace: ndtech
       imageVersion: 0.0.2
