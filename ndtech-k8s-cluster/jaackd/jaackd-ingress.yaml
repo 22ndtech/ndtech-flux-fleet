@@ -14,14 +14,14 @@ spec:
     - secretName: letsencrypt
       hosts:
         - jaackd.com
-  # rules:
-  #   - host: jaackd.com
-  #     http:
-  #       paths:
-  #         - backend:
-  #            service:
-  #             name: jaackd-website
-  #             port:
-  #               number: 80
-  #           path: /
-  #           pathType: ImplementationSpecific
+  rules:
+    - host: jaackd.com
+      http:
+        paths:
+          - backend:
+             service:
+              name: ndtech-website
+              port:
+                number: 80
+            path: /
+            pathType: ImplementationSpecific
