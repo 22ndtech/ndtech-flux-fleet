@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   # "namespace" omitted since ClusterRoles are not namespaced
-  name: mongo-port-forward
+  name: port-forward
   namespace: mongo
 rules:
 - apiGroups: [""]
