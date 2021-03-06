@@ -152,7 +152,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-# This role binding allows "kimhegedus" view access to the mongo namespace
+# This role binding allows "kimhegedus" to forward ports in the mongo namespace
 kind: RoleBinding
 metadata:
   name: kimhegedus-port-forward-mongo
@@ -165,7 +165,7 @@ subjects:
 roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
   kind: Role #this must be Role or ClusterRole
-  name: mongo-port-forward # this must match the name of the Role or ClusterRole you wish to bind to
+  name: port-forward # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -183,6 +183,23 @@ roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
   kind: ClusterRole #this must be Role or ClusterRole
   name: view # this must match the name of the Role or ClusterRole you wish to bind to
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This role binding allows "kimhegedus" to forward ports in the tekton-pipelines namespace
+kind: RoleBinding
+metadata:
+  name: kimhegedus-port-forward
+  namespace: tekton-pipelines
+subjects:
+# You can specify more than one "subject"
+- kind: User
+  name: kimhegedus # "name" is case sensitive
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  # "roleRef" specifies the binding to a Role / ClusterRole
+  kind: Role #this must be Role or ClusterRole
+  name: port-forward # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
