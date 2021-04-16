@@ -17,3 +17,5 @@ spec:
     group: cert-manager.io
   isCA: true
   commonName: 22ndtech.com
+  privateKey:
+    rotationPolicy: Always
