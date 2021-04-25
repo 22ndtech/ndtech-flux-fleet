@@ -17,6 +17,6 @@ spec:
       interval: 10m
   values:
     installCRDs: true
-    # featureGates: "ExperimentalCertificateControllers=true"
+    featureGates: "ExperimentalCertificateControllers=true"
   #   admissionWebhooks:
   #     failurePolicy: Ignore
