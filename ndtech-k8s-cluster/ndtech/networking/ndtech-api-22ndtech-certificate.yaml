@@ -2,12 +2,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: www-22ndtech-ca
+  name: api-22ndtech-ca
   namespace: ndtech
 spec:
-  secretName: letsencrypt-www-22ndtech
+  secretName: letsencrypt-api-22ndtech
   dnsNames:
-  - www.22ndtech.com
+  - api.22ndtech.com
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
