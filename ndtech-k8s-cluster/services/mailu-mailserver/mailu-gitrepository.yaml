@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 30s
   ref:
-    branch: master
+    branch: main
   url: https://github.com/22ndtech/mailu
