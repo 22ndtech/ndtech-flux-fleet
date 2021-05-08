@@ -8,4 +8,4 @@ spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/22ndtech/nfs-volue-provisioner
+  url: https://github.com/22ndtech/nfs-volume-provisioner
