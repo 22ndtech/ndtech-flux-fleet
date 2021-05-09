@@ -8,7 +8,7 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: admin@22ndtech.com
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt
     solvers:
       - http01:
           ingress:
