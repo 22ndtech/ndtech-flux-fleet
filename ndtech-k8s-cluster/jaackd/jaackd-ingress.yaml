@@ -8,10 +8,10 @@ metadata:
     external-dns.alpha.kubernetes.io/hostname: jaackd.com
     kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "true"
-    cert-manager.io/cluster-issuer: letsencrypt
+    cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
   tls:
-    - secretName: letsencrypt
+    - secretName: letsencrypt-staging
       hosts:
         - jaackd.com
   rules:

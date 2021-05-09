@@ -22,7 +22,9 @@ spec:
         image: k8s.gcr.io/external-dns/external-dns:v0.7.3
         args:
         - --source=ingress # ingress is also possible
-        - --domain-filter=jaackdreality.com # (optional) limit to only jaackdreality.com
+        - --domain-filter=jaackdreality.com
+        - --domain-filter=jaackd.com
+        - --domain-filter=22ndtech.com
         - --provider=digitalocean
         - --log-level=debug
         env:
