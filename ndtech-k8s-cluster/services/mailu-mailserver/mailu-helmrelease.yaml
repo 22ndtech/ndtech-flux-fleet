@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: ./charts/mailu
-      version: 0.0.21.1
+      version: 0.0.21.2
       sourceRef:
         kind: GitRepository
         name: mailu
@@ -18,5 +18,5 @@ spec:
   values:
     deployment:
       storageSize: 40Gi
-      certificateIssuer: letsencrypt-staging
-      certificateSecret: letsencrypt-staging
+      certificateIssuer: letsencrypt
+      certificateSecret: letsencrypt
