@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: ./charts/mailu
-      version: 0.0.22
+      version: 0.0.23
       sourceRef:
         kind: GitRepository
         name: mailu
