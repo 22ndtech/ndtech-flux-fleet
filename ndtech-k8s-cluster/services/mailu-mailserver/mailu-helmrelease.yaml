@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: ./charts/mailu
-      version: 0.0.27
+      version: 0.0.28
       sourceRef:
         kind: GitRepository
         name: mailu
@@ -20,3 +20,4 @@ spec:
       storageSize: 40Gi
       certificateIssuer: letsencrypt
       certificateSecret: letsencrypt
+      domain: jaackdreality.com
