@@ -1,0 +1,43 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: code-server-jaackdreality-com
+  namespace: ndtech-code-server
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: code-server.jaackdreality.com
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  tls:
+    - secretName: letsencrypt
+      hosts:
+        - code-server.jaackdreality.com
+  rules:
+    - host: code-server.jaackdreality.com
+      http:
+        paths:
+          - backend:
+             service:
+              name: ndtech-code-server
+              port:
+                number: 8080
+            path: /
+            pathType: ImplementationSpecific
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: code-server-jaackdreality
+  namespace: ndtech
+spec:
+  secretName: letsencrypt
+  dnsNames:
+  - code-server.jaackdreality.com
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+    group: cert-manager.io
+  isCA: true
+  commonName: code-server.jaackdreality.com
