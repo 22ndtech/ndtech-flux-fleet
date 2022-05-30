@@ -9,13 +9,13 @@ spec:
   chart:
     spec:
       chart: ./charts/tekton-pipeline
+      version: 0.0.1
       sourceRef:
         kind: GitRepository
         name: tekton-helm-chart
         namespace: flux-system
       interval: 1m
   values:
-    replicaCount: 2
     auth:
       docker:
         url: https://hub.docker.com
